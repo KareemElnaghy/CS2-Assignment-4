@@ -41,6 +41,13 @@ int main()
     
     cout << "Insert the first and second value!" << endl;
     cin >> firstValue >> secondValue;
+    
+    insertAfter(firstValue, secondValue, values);   //calls the insertAfter function
+    
+    LinkedList numbers = createList(values);        //creates a new linked list and calls the createList function
+    
+    cout << "The Current Linked List: ";
+    numbers.printList();                   //prints the linked list after final changes after occurences considered
 }
 
 void insertAfter(int firstValue, int secondValue, vector<int>& vec) //Insert after function uses iterator to iterate through vector and adds the secondValue after every occurence of the first value in the vector
