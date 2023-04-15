@@ -125,6 +125,20 @@ public:
         cout<<endl;
      }
     
+    int sumList()
+    {
+        int sum=0;
+        Node* q = this->get_head(); //mirror pointer
+        
+        while(q!= NULL) // traverses through linked list adding each value stored in node
+        {
+            sum+= q->value;
+            
+            q=q->next;
+        }
+        
+        return sum;
+    }
 };
 
 #endif /* LinkedList_h */

@@ -51,6 +51,8 @@ int main()
     numbers.printList();                   //prints the linked list after final changes after occurences considered
     
     printOccurrence(numbers);                       //Calls function that prints the number of occurences for each value
+    
+    cout<<"The sum of the values in the linked list is "<<numbers.sumList()<<endl;  //outputs the sum of all the values in the nodes in the linked list
 }
 
 void insertAfter(int firstValue, int secondValue, vector<int>& vec) //Insert after function uses iterator to iterate through vector and adds the secondValue after every occurence of the first value in the vector
