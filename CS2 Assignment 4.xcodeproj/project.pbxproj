@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		F0A91CBD29EB418200CB9413 /* CS2 Assignment 4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CS2 Assignment 4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A91CC029EB418200CB9413 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F0A91CC729EB43C800CB9413 /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A91CC029EB418200CB9413 /* main.cpp */,
+				F0A91CC729EB43C800CB9413 /* LinkedList.h */,
 			);
 			path = "CS2 Assignment 4";
 			sourceTree = "<group>";
