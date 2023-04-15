@@ -55,6 +55,7 @@ int main()
     cout<<"The sum of the values in the linked list is "<<numbers.sumList()<<endl;  //outputs the sum of all the values in the nodes in the linked list
 }
 
+//Function Definitions
 void insertAfter(int firstValue, int secondValue, vector<int>& vec) //Insert after function uses iterator to iterate through vector and adds the secondValue after every occurence of the first value in the vector
 {
     if(vec.size()==1)  //checks if the vector consists of one element only
