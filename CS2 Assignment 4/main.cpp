@@ -13,6 +13,7 @@ using namespace std;
 //Function Prototypes
 void insertAfter(int, int, vector<int>&);
 LinkedList createList(vector<int>&);
+void printOccurrence(LinkedList);
 
 int main()
 {
@@ -48,6 +49,8 @@ int main()
     
     cout << "The Current Linked List: ";
     numbers.printList();                   //prints the linked list after final changes after occurences considered
+    
+    printOccurrence(numbers);                       //Calls function that prints the number of occurences for each value
 }
 
 void insertAfter(int firstValue, int secondValue, vector<int>& vec) //Insert after function uses iterator to iterate through vector and adds the secondValue after every occurence of the first value in the vector
@@ -102,4 +105,16 @@ LinkedList createList(vector<int>& vec)
         p = p->next;        //move p to the next node
     }
     return list;            //returns the newly formed list
+}
+
+void printOccurrence(LinkedList list)
+{
+    Node* q = list.get_head(); //mirror pointer
+    cout<<"Number of Occurences:    ";  //traverses through linked list and displays the number of occurences under the printed linked list
+    while (q != NULL)
+    {
+        cout << q->counter << " ";
+        q = q->next;
+    }
+    cout<<endl;
 }
