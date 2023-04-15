@@ -10,7 +10,9 @@
 #include <iostream>
 using namespace std;
 
+//Function Prototypes
 void insertAfter(int, int, vector<int>&);
+LinkedList createList(vector<int>&);
 
 int main()
 {
@@ -58,4 +60,39 @@ void insertAfter(int firstValue, int secondValue, vector<int>& vec) //Insert aft
             }
         }
     }
+}
+
+LinkedList createList(vector<int>& vec)
+{
+    LinkedList list;        //create a object of Linked List
+
+    for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it) //Create nodes for each element in the vector
+    {
+        list.addNode(*(it));
+    }
+    
+    Node* p = list.get_head();
+
+    while (p != NULL)   //Outer loop will loop the elements one by one to compare with rest of the list (moves the p node)
+    {
+        Node* q = p->next;
+
+        while (q != NULL)   //Inner loop iterates the rest of the list (moves the q node)
+        {
+            if (p->value == q->value)   //checks if there as been an occurence and if so removes the duplicate nodes add icnrements the counter for the respective node
+            {
+                Node* temp = q;
+                q = q->next;
+                list.removeNode(temp);
+                p->counter++;
+            }
+            else        //q moves to next node otherwise
+            {
+                q = q->next;
+            }
+        }
+
+        p = p->next;        //move p to the next node
+    }
+    return list;            //returns the newly formed list
 }
