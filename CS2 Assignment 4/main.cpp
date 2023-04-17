@@ -13,7 +13,7 @@ using namespace std;
 //Function Prototypes
 void insertAfter(int, int, vector<int>&);
 LinkedList createList(vector<int>&);
-void printOccurrence(LinkedList);
+void printOccurrence(LinkedList)const;
 
 int main()
 {
@@ -109,7 +109,7 @@ LinkedList createList(vector<int>& vec)
     return list;            //returns the newly formed list
 }
 
-void printOccurrence(LinkedList list)
+void printOccurrence(LinkedList list)const
 {
     Node* q = list.get_head(); //mirror pointer
     cout<<"Number of Occurences:    ";  //traverses through linked list and displays the number of occurences under the printed linked list
