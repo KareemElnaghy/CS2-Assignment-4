@@ -112,7 +112,7 @@ public:
         delete remNode; //Deletes the node
     }
 
-    void printList()
+    void printList() const
      {
          Node* q; //mirror pointer
          q=head;
