@@ -13,7 +13,7 @@ using namespace std;
 //Function Prototypes
 void insertAfter(int, int, vector<int>&);
 LinkedList createList(vector<int>&);
-void printOccurrence(LinkedList)const;
+void printOccurrence(LinkedList);
 
 int main()
 {
@@ -57,14 +57,4 @@ int main()
     cout<<"Sum of list including occurences: "<<numbers.sumListOccur()<<endl;//outputs sum of all the values in the nodes including their occurences
 }
 
-void printOccurrence(LinkedList list)const
-{
-    Node* q = list.get_head(); //mirror pointer
-    cout<<"Number of Occurences:    ";  //traverses through linked list and displays the number of occurences under the printed linked list
-    while (q != NULL)
-    {
-        cout << q->counter << " ";
-        q = q->next;
-    }
-    cout<<endl;
-}
+
