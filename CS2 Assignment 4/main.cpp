@@ -52,6 +52,8 @@ int main()
     
     printOccurrence(numbers);                       //Calls function that prints the number of occurences for each value
     
-    cout<<"The sum of the values in the linked list is "<<numbers.sumList()<<endl;  //outputs the sum of all the values in the nodes in the linked list
+    cout<<"Sum of list excluding occurences: "<<numbers.sumList()<<endl;  //outputs the sum of all the values in the nodes in the linked list
+    
+    cout<<"Sum of list including occurences: "<<numbers.sumListOccur()<<endl;//outputs sum of all the values in the nodes including their occurences
 }
 

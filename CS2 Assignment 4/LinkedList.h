@@ -139,6 +139,21 @@ public:
         
         return sum;
     }
+    
+    int sumListOccur()
+    {
+        int sum=0;
+        Node* q = this->get_head(); //mirror pointer
+        
+        while(q!= NULL) // traverses through linked list adding each value stored in node
+        {
+            sum+= (q->value)*(q->counter);
+            
+            q=q->next;
+        }
+        
+        return sum;
+    }
 };
 
 #endif /* LinkedList_h */
